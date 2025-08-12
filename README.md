@@ -5,11 +5,6 @@ Each project focuses on a specific data pipeline scenario — from raw data inge
 
 ---
 
-## 📂 Project Structure
-
-
----
-
 ## 🗂 Projects
 
 ### 1. **Project 01 — CSV ETL**
