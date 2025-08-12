@@ -49,4 +49,4 @@ The pipeline cleans and transforms the data, then exports the results in multipl
 pip install pandas
 
 # Run the ETL pipeline
-python sales_etl.py
+python sales_data_etl_pipeline.py
