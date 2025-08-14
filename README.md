@@ -1,4 +1,4 @@
-# Data Engineering Practice
+# Data Engineering Project Practice
 
 This repository contains hands-on projects to practice data engineering concepts, tools, and workflows.  
 Each project focuses on a specific data pipeline scenario — from raw data ingestion to transformation and storage.
