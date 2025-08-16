@@ -2,7 +2,7 @@ from googleapiclient.discovery import build #to build video or extract youtube v
 import pandas as pd #our data engineering essentials, u know for cleaning extractic etc
 from sqlalchemy import create_engine #for DB after getting data we will upload to PostgreSQL
 #1 extract
-API_KEY = "AIzaSyDd4ld9QmdUSh6QagyDLbaVjV78UA1gWXc"
+API_KEY = "YOUR_API"
 YOUTUBE = build("youtube", "v3", developerKey=API_KEY)
 
 def fetch_trending_videos(region="US", max_results=10):
@@ -38,7 +38,7 @@ df = df[df["views"] > 0] #take video greater than 0 only
 
 
 #3 Load (PostgreSQL)
-engine = create_engine("postgresql+psycopg2://postgres:%40Alifasyraf1@localhost:5432/youtube_db")
+engine = create_engine("YOUR_POSTGRES_PATH")
 #save dataframe into PostgreSQL
 df.to_sql("trending_videos", engine, schema="public", if_exists="replace", index=False)
 print("Data loaded into PostgreSQL sucessfully!")
