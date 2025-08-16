@@ -11,13 +11,11 @@ Each project focuses on a specific data pipeline scenario — from raw data inge
 - **Goal:** Extract data from CSV files, transform it (clean, filter, enrich), and load it into a database or another file format.
 - **Skills:** Python, Pandas, CSV handling, basic ETL workflows.
 
-### 2. **Project 02 — API Data**
-- **Goal:** Fetch data from public APIs, process it, and store it for analysis.
-- **Skills:** Python, Requests library, JSON handling, API authentication.
-
 ### 2. **Project 02 — YouTube Trending ETL**
 - **Goal:** Extract trending video data from the YouTube API, transform it for analysis, and load it into a PostgreSQL database.
 - **Skills:** Python, Pandas, SQLAlchemy, API authentication, data transformation, PostgreSQL.
+
+### 3. **Upcoming**
 
 ---
 
