@@ -17,7 +17,7 @@ The pipeline cleans and transforms the data, then exports the results in multipl
 - **Handle missing data** – Fills missing customer names, removes rows with missing critical data
 - **Data type conversion** – Converts date fields, ensures numeric types are consistent
 - **Calculated fields** – Adds `total_amount`, `year`, and `month` columns
-- **Data filtering** – Keeps sales dated in the current calendar year or the previous year
+- **Data filtering** – Keeps sales whose year is at least the current year minus one
 
 ### **3️⃣ Load**
 - Saves cleaned data in **CSV** format
@@ -72,4 +72,4 @@ The terminal also prints row counts, total revenue, average sale amount, and the
 
 ### Why the number of results changes over time
 
-The sample generator uses dates from 2024–2025, while the transformation retains the current calendar year and the previous year. This is a calendar-year filter, rather than a rolling 24-month window. The saved results therefore depend on the year when you run the example, and can be empty once both sample years fall outside that filter. To experiment with more recent sales, adjust the sample date range and its matching random index bound in `generate_sample_data()`.
+The sample generator uses dates from 2024–2025, while the transformation retains rows whose year is at least the current year minus one. This uses a calendar-year cutoff, rather than a rolling 24-month window, and does not exclude future-dated rows. The saved results therefore depend on the year when you run the example, and can be empty once both sample years fall outside that filter. To experiment with more recent sales, adjust the sample date range and its matching random index bound in `generate_sample_data()`.
